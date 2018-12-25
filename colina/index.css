@@ -1,0 +1,19 @@
+@media(min-width: 768px) {
+  .checkout .white-block.widget-container {
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+}
+
+.btn.btn-main, .scroll-top, footer, header.sticked nav.navigation-main .logo, header.sticked {
+  background-color: #00908A;
+}
+
+.subscribe, .subscribe .box:after, .scroll-top.active, .page-header {
+  background-color: #00AFAA;
+}
+
+.navigation-block {
+  visibility: hidden;
+}

@@ -1,0 +1,89 @@
+/*@font-face { font-family: Poppins; font-style: normal; font-weight: 400; src: local("Poppins Regular"), local("Poppins-Regular"), url("https://fonts.gstatic.com/s/poppins/v5/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }*/
+/*@font-face { font-family: Poppins; font-style: normal; font-weight: 700; src: local("Poppins Bold"), local("Poppins-Bold"), url(https://fonts.gstatic.com/s/poppins/v5/pxiByp8kv8JHgFVrLCz7Z1xlEw.woff) format("woff"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }*/
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', arial, sans-serif;
+  background-image: url("./bg_diag.png");
+  background-color: #f8f8f8;
+}
+
+body.niceFont {
+  font-family: 'Montserrat', 'Helvetica Neue', arial, sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+  /*font-family: Poppins, 'Helvetica Neue', arial, sans-serif;*/
+}
+
+#gusteau h1 {
+  margin: 0 0 10px;
+  text-align: center;
+  font-family: cursive;
+}
+
+#responsive-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#responsive-content > div {
+  margin: 10px 4%;
+}
+
+#tableBooking {
+  margin-top: 10px;
+}
+
+#tableBooking ul {
+  margin: 0;
+}
+
+#tableBooking li {
+  margin: 10px 0;
+}
+
+#remy {
+  display: flex;
+}
+
+#remy img {
+  margin-right: 20px;
+}
+
+#ourLocation {
+  margin: 10px 0;
+  text-align: center;
+}
+
+#here-mobility-widget {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: auto;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 900px) {
+  body {
+    font-size: 1.3em;
+  }
+
+  #responsive-content {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  #ourLocation {
+    margin: 40px 0 20px;
+  }
+}
