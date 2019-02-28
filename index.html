@@ -109,10 +109,10 @@
         hmw({locale: lang.value})
       })
 
-      var d = new Date(Date.now() + 24 * 60 * 60 * 1000) // tomorrow
+      var d = new Date(Date.now()) // tomorrow
       // d.setMonth(11) // December
-      d.setHours(20, 40) // 8:40pm
-      tableBookingDate.value = d.toISOString().slice(0, 10)
+      // d.setHours(20, 40) // 8:40pm
+      // tableBookingDate.value = d.toISOString().slice(0, 10)
       hmw({
         // anonymize: true,
         // user: {name: 'Amnon', phone: '+972520000000'},
@@ -121,7 +121,7 @@
         // timezone: 'Europe/Paris',
         // pickup: 'Soroka University Medical Center',
         // destination: 'Kanyon HaNegev',
-        destination: '170 Rue de Rivoli, Paris'
+        // destination: '170 Rue de Rivoli, Paris'
       })
       tableBookingDate.addEventListener('change', function () {
         var d = new Date(tableBookingDate.value)
@@ -132,15 +132,21 @@
       })
 
       var gusteauShow = function(display) {
+        console.log(display);
+        
         gusteau.style.display = display
         ourLocation.style.display = display
       }
+      
       gusteauShow(sessionStorage.getItem('gusteauShow') || 'block')
       toggle.addEventListener('click', function () {
         var display = gusteau.style.display === 'none' ? 'block' : 'none'
         sessionStorage.setItem('gusteauShow', display)
         gusteauShow(display)
       })
+      gusteauShow('none')
+
+
       document.body.className = sessionStorage.getItem('gusteauClass') || 'niceFont'
       niceFont.checked = document.body.className === 'niceFont'
       niceFont.addEventListener('input', function () {
@@ -179,9 +185,12 @@
         }
         hmw({auth: data})
       }
+
+
     </script>
 
-    <script type="text/javascript" src="astray.js"></script>
-    <script type="text/javascript" src="i18nPanel.js"></script>
-</body>
+    <!-- <script type="text/javascript" src="astray.js"></script> -->
+    <!-- <script type="text/javascript" src="i18nPanel.js"></script> -->
+
+  </body>
 </html>
