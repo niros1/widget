@@ -60,11 +60,38 @@ body.niceFont {
   text-align: center;
 }
 
-#here-mobility-widget {
+#here-mobility-widget,
+#astray {
   box-sizing: border-box;
   padding: 10px;
   margin: auto;
   width: 100%;
+}
+
+#astray,
+#i18nPanel {
+  padding: 1em 10%;
+  font-size: 0.7em;
+}
+
+#i18nPanel {
+  position: relative;
+  min-height: 200px;
+}
+
+#i18nPanel p {
+  position: absolute;
+  margin: 0;
+  white-space: nowrap;
+  text-align: right;
+  width: 100%;
+  color: orangered;
+  transition: all 0.5s;
+}
+
+#i18nPanel p.seen {
+  width: 0;
+  color: limegreen;
 }
 
 @media (min-width: 600px) {
