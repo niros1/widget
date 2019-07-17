@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>HERE Mobility Web Widget</title></head>
-<style>html,body{height:100%;width:100%}</style>
-<body><script>
+<style>html,body{height:100%;width:100%}@keyframes fade{0%,50%{opacity:0}to{opacity:1}}body>h2{text-align:center;animation:2s fade}</style>
+<body><h2>⏳ Loading...</h2><script>
+  const forceUrl = sessionStorage.getItem('forceUrl') || '';
 (function(d,b){
   var s=d.createElement('script');s.src=b+'?a=&b='+(Date.now()/864e5|0);d.body.appendChild(s)
-})(document,'widget_.js')
+})(document,forceUrl + 'widget_.js')
 </script></body>
 </html>

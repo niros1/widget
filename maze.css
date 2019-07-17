@@ -1,0 +1,107 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Exo 2', sans-serif;
+}
+
+.shadow {
+  box-shadow: 0 0 5px #000;
+}
+
+header {
+  height: 80px;
+}
+
+header .layer1 {
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+header .layer2,
+header .layer3 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+header .layer2 {
+  height: 80px;
+  background-color: #fff;
+}
+
+header .layer3 {
+  font-size: 2em;
+  line-height: 80px;
+  display: flex;
+}
+
+header .layer3 span {
+  flex: 1;
+}
+
+header .layer3 :first-child {
+  text-align: right;
+}
+header .layer3 :last-child {
+  text-align: left;
+}
+
+header .layer3 img {
+  margin: 10px;
+}
+
+.spacer {
+  margin-bottom: 80px;
+}
+
+main {
+  text-align: center;
+}
+
+@keyframes glitch-anim {
+  0%, 88% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+  }
+  89%, 91% {
+    clip-path: polygon(0% 20%, 100% 20%, 100% 50%, 0% 50%);
+    left: -1px;
+  }
+  92%, 94% {
+    clip-path: polygon(0% 30%, 100% 30%, 100% 60%, 0% 60%);
+    left: 2px;
+  }
+  95%, 97% {
+    clip-path: polygon(0% 50%, 100% 50%, 100% 80%, 0% 80%);
+    left: -2px;
+  }
+  98%, 100% {
+    clip-path: polygon(0% 60%, 100% 60%, 100% 90%, 0% 90%);
+    left: 1px;
+  }
+}
+
+.glitch {
+  position: relative;
+}
+
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  animation: glitch-anim 4s infinite linear;
+}
+
+.item img {
+  vertical-align: top;
+  margin: 0 3px;
+}

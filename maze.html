@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Maze</title>
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:300,600" rel="stylesheet">
+    <link rel="stylesheet" href="maze.css">
+</head>
+<body>
+    <header class="shadow spacer">
+        <div class="layer1 shadow"></div>
+        <div class="layer2"></div>
+        <div class="layer3">
+            <span>The</span>
+            <img src="images/maze.svg" width="80" height="80">
+            <span>Maze</span>
+        </div>
+    </header>
+
+    <main>
+        <p>An Escape Room like no other</p>
+        <p>You are welcome to enter anytime</p>
+        <p class="spacer"><span class="glitch" data-text="Leaving">Leaving</span> is a whole other deal...</p>
+        <p class="item"><img src="images/phone.svg" width="20" height="20">(775) 275-7469</p>
+        <p class="item"><img src="images/marker.svg" width="20" height="20">The Maze, Southend-on-Sea, UK</p>
+
+        <div id="here-mobility-asset" style="display: inline">
+            <script>
+              const getQueryParam = function (name) {
+                let s = location.search
+                s = s[0] === '?' ? s.slice(1) : s // remove opening '?'
+                return s
+                  .split('&') // array of key-value pairs
+                  .filter(kv => kv.split('=')[0] === name) // get only pair(s) with desired key
+                  .map(kv => kv.split('=')[1]) // return the value(s)
+              }
+              const DESIGN = Number(getQueryParam('design'))
+              const APP_ID = '2jHx6BkEPg10lj3MXi5MasvvQxwevNXs'
+              const APP_SECRET = 'DZ__DIct-x02uCphGIOGfcAg8cp0iNIXWSpBzsyqZwsvUDE_96Pxs7L1KDS-BAAs'
+              sessionStorage.setItem('forceDev', '+')
+            </script>
+
+            <script>
+              (function(c,o,n,j,u,r,e){
+                var h='HereMobilityWidget';c[h]=c[h]||[];c[h].push(u);if(!(u in c)){c[u]=function(o){c[u].q.push(o)};c[u].q=[]}c[u].t=Date.now();
+                var s=o.createElement('script');s.src=n+'?a='+r+'&b='+(c[u].t/864e5|0)+'&c='+u+'&d='+encodeURIComponent(JSON.stringify(e));o.querySelector('#'+j).appendChild(s);
+              })(window,document,'conjure.js','here-mobility-asset','hmw',APP_ID,{design:DESIGN,locale:'en-US'});
+            </script>
+
+            <script type="text/javascript" src="sha512.js"></script>
+
+            <script>
+              const now = Math.ceil(Date.now() / 1e3)
+              const shaObj = new jsSHA('SHA-384', 'TEXT')
+              shaObj.setHMACKey(APP_SECRET, 'TEXT')
+              shaObj.update(btoa(APP_ID) + '.' + now)
+              hmw({dev: true})
+              hmw({
+                auth: {
+                  app_id: APP_ID,
+                  user_id: Math.random().toString(36).slice(2),
+                  request_timestamp: now,
+                  hmac: shaObj.getHMAC('HEX')
+                }
+              })
+            </script>
+        </div>
+    </main>
+</body>
+</html>
