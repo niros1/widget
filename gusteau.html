@@ -122,14 +122,13 @@
       tableBookingDate.value = d.toISOString().slice(0, 10)
       hmw({
         // anonymize: true,
-        user: {name: 'Etai', phone: '+972528223154'},
-        // token: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxSndRckdydFVwcEV5SHk5eThzNVloQWxWQzkiLCJpc3MiOiJIRVJFLU1PQklMSVRZLUdST1VQIiwiYXVkIjoiMmpIeDZCa0VQZzEwbGozTVhpNU1hc3Z2UXh3ZXZOWHMiLCJleHAiOjE1NjM0OTgwMjEsImlhdCI6MTU2MzQxMTYyMSwidHlwZSI6InVzZXIiLCJkb21haW5EYXRhIjoie1wiZGVtYW5kZXJfaWRcIjpcImJiYXRjbXYwbWk1MDAwYm91M2lnXCIsXCJkZW1hbmRfcHJvZHVjdFwiOlwiaGVyZV93aWRnZXRcIixcIndpZGdldF9uYW1lXCI6XCJHdXN0ZWF1XCJ9In0.aJGJKawVV2A-qzuiJt5u0ILZvzvKxM_V1BT13o1BxQqOt_dZTomn_f0uEi0g-q3kibrIzOOSgeI_lFbnLp1o8A',
+        // user: {name: 'Amnon', phone: '+972520000000'},
         locale: lang.value,
         eventTime: d.getTime(),
         // timezone: 'Europe/Paris',
-        pickup: 'Soroka University Medical Center',
-        destination: 'Kanyon HaNegev',
-        // destination: '170 Rue de Rivoli, Paris',
+        // pickup: 'Soroka University Medical Center',
+        // destination: 'Kanyon HaNegev',
+        destination: '170 Rue de Rivoli, Paris',
         // favDriver: true,
       })
       tableBookingDate.addEventListener('change', function () {
